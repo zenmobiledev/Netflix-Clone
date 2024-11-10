@@ -1,5 +1,6 @@
 package com.mobbelldev.netflixclone.data.dto.movies
 
+import com.google.gson.annotations.SerializedName
 import com.mobbelldev.netflixclone.data.dto.GenreDTO
 import com.mobbelldev.netflixclone.data.dto.ProductionCompanyDTO
 import com.mobbelldev.netflixclone.data.dto.ProductionCountryDTO

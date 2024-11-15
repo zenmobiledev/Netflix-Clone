@@ -4,6 +4,7 @@ import com.mobbelldev.netflixclone.data.dto.VideosResponseDTO
 import com.mobbelldev.netflixclone.data.dto.movies.MovieDetailResponseDTO
 import com.mobbelldev.netflixclone.data.dto.movies.MovieRecommendationsResponseDTO
 import com.mobbelldev.netflixclone.data.dto.movies.MovieResponseDTO
+import dagger.Binds
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query

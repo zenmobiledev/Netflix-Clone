@@ -6,12 +6,13 @@ import com.mobbelldev.netflixclone.domain.entities.VideosResponse
 import com.mobbelldev.netflixclone.domain.entities.movies.MovieDetail
 import com.mobbelldev.netflixclone.domain.entities.movies.MovieRecommendations
 import com.mobbelldev.netflixclone.domain.entities.movies.MovieResponse
-import com.mobbelldev.netflixclone.domain.repositories.NetflixRepository
+import com.mobbelldev.netflixclone.domain.repositories.INetflixRepository
+import javax.inject.Inject
 
-class NetflixRepositoryImpl(
+class INetflixRepositoryImpl @Inject constructor(
     private val apiService: ApiService,
     private val mapper: Mapper,
-) : NetflixRepository {
+) : INetflixRepository {
     override suspend fun getVideos(contentType: String, contentId: Int): VideosResponse {
         val response = apiService.getVideos(
             contentType = contentType,

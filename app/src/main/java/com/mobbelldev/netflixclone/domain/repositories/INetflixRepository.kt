@@ -5,7 +5,7 @@ import com.mobbelldev.netflixclone.domain.entities.movies.MovieDetail
 import com.mobbelldev.netflixclone.domain.entities.movies.MovieRecommendations
 import com.mobbelldev.netflixclone.domain.entities.movies.MovieResponse
 
-interface NetflixRepository {
+interface INetflixRepository {
     suspend fun getVideos(contentType: String, contentId: Int): VideosResponse
 
     suspend fun getMovieList(category: String): MovieResponse

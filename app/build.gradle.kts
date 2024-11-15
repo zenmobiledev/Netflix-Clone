@@ -4,6 +4,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.parcelize)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.hilt.android)
 }
 
 android {
@@ -67,6 +69,10 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
 
+    // android x
+    implementation(libs.androidx.activity.ktx)
+    implementation(libs.androidx.fragment.ktx)
+
     // https://github.com/PierfrancescoSoffritti/android-youtube-player
     implementation(libs.youtube.player)
 
@@ -80,7 +86,16 @@ dependencies {
 
     // https://github.com/bumptech/glide
     implementation(libs.glide)
-    annotationProcessor(libs.glide.compiler)
+    ksp(libs.glide.compiler)
+
+    // https://insert-koin.io/
+//    implementation(libs.koin.android)
+//    implementation(libs.koin.core)
+
+    // https://dagger.dev/
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.android.compiler)
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
